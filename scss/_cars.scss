@@ -1,9 +1,17 @@
+@import 'blocks';
+@mixin theme($theme: #000){
+    box-shadow: 0 4px 8px 0 $color-03, 0 6px 20px 0 $color-03;
+    opacity: .8;
+}
 .cars {
+    @extend %blocks;
     h2 {
         color: $color-02;
     }
     li {
-        color: $color-04;
+        .img-container{
+            @include theme;
+        }
 
         a {
             background-color: $color-default;
